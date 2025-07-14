@@ -7,24 +7,25 @@ Custom Odoo module to enhance the Sales application with additional functionalit
 ## 📦 Module Features
 
 ### ✅ 1. **Custom Delivery Date on Sale Orders**
-- Adds a new **Delivery Date** field on the Sale Order form.
-- Useful for managing expected delivery timelines per order.
+- Adds a **Delivery Date** field to the sale order form to manage expected delivery.
+
 
 📸 Screenshot:
 
 ![Delivery Date Field](screenshots/delivery_date.png)
 
+![Expected Delivery Field](screenshots/expected_delivery.png)
+
 ---
 
 ### ✅ 2. **Category-Based Discount**
-- Automatically applies a discount on sale order lines based on the **product category**.
-- Discount percentage is configurable per category.
+- Add a discount directly on the product category. When you select a product from that category in a sale order, the discount applies automatically.
 
 📸 Screenshot:
 
-![Category Discount Setup](screenshots/category_discount_config.png)
+![Category Discount](screenshots/category_discount.png)
 
-📸 Screenshot:
+![Select Product](screenshots/select_product.png)
 
 ![Discount Applied in Order](screenshots/category_discount_applied.png)
 
@@ -32,16 +33,11 @@ Custom Odoo module to enhance the Sales application with additional functionalit
 
 ### ✅ 3. **Sales Commission by User**
 - Each salesperson can be assigned a **commission percentage**.
-- The system calculates the total commission for each order based on order lines.
-- Includes a dedicated **Commission** model with views to manage configuration and history.
+
 
 📸 Screenshot:
 
-![Salesperson Commission Setup](screenshots/user_commission_config.png)
-
-📸 Screenshot:
-
-![Commission Field in Sale Order](screenshots/commission_field_sale_order.png)
+![Salesperson Commission](screenshots/user_commission.png)
 
 ---
 
