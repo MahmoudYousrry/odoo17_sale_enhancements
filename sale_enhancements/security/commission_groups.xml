@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="group_commission" model="res.groups">
+        <field name="name">Commission Manager</field>
+        <field name="category_id" ref="base.module_category_sales"/>
+        <field name="users" eval="[(4, ref('base.user_root'))]"/>
+    </record>
+</odoo>

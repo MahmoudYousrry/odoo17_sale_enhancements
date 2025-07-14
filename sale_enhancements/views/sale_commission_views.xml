@@ -1,0 +1,63 @@
+<odoo>
+    <record id="view_sale_commission_form" model="ir.ui.view">
+        <field name="name">sale.commission.form</field>
+        <field name="model">sale.commission</field>
+        <field name="arch" type="xml">
+            <form string="Sales Commission">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="user_id"/>
+                            <field name="min_target"/>
+                            <field name="max_target"/>
+                        </group>
+                        <group>
+                            <field name="below_min_percentage"/>
+                            <field name="between_min_max_percentage"/>
+                            <field name="above_max_percentage"/>
+                        </group>
+                        <group>
+                            <field name="achieved_amount"/>
+                            <field name="commission_percentage" readonly="1"/>
+                            <field name="commission_amount" readonly="1"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_sale_commission_tree" model="ir.ui.view">
+        <field name="name">sale.commission.tree</field>
+        <field name="model">sale.commission</field>
+        <field name="arch" type="xml">
+            <tree string="Sales Commissions">
+                <field name="user_id"/>
+                <field name="achieved_amount"/>
+                <field name="commission_percentage"/>
+                <field name="commission_amount"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_sale_commission" model="ir.actions.act_window">
+        <field name="name">Sales Commissions</field>
+        <field name="res_model">sale.commission</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="menu_sale_commission_root"
+        name="Commissions"
+        parent="sale.sale_menu_root"
+        groups="sale_enhancements.group_commission"
+    />
+    <menuitem id="menu_sale_commission"
+          name="Sales Commissions"
+          parent="menu_sale_commission_root"
+          action="action_sale_commission"
+          groups="sale_enhancements.group_commission"
+
+    />
+
+</odoo>
